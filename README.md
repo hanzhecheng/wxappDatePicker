@@ -10,5 +10,7 @@
 currentTime为初始日期参数，updateDate允许在选择日期后向父组件传递选中的日期
 
 ## 效果展示
-![avatar](https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/current.jpg)
-![avatar](https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/select.jpg)
+<div align="center">
+ <img src="https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/current.jpg"  height="330" width="495">
+ <img src="https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/select.jpg"  height="330" width="495">
+</div>
