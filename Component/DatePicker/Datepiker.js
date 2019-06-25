@@ -6,12 +6,12 @@ Component({
   properties: {
 
   },
-  observers:{
-    'currentDate':function(val){
+  observers: {
+    'currentDate': function (val) {
       this.setData({
-        dateNow:val.toLocaleDateString()
+        dateNow: val.toLocaleDateString()
       })
-      this.triggerEvent("updateDate",val.toLocaleDateString())
+      this.triggerEvent("updateDate", val.toLocaleDateString())
     }
   },
   lifetimes: {
@@ -32,7 +32,7 @@ Component({
     currentIndex: -1,
     currentDate: "",
     notCurrentFlag: false, //是否点了上一个月或下一个月
-    dateNow:""
+    dateNow: ""
   },
 
   /**
@@ -245,5 +245,15 @@ Component({
         currentIndex: rowIndex + "" + columnIndex
       })
     },
+    bindDateChange(e) {
+      console.log(e.detail.value)
+      this.setData({
+        currentDate: new Date(e.detail.value),
+        notCurrentFlag:false
+      }, () => {
+        this.initDays(this.data.currentDate)
+      })
+
+    }
   }
 })

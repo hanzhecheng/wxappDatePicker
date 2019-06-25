@@ -1,7 +1,11 @@
 <view class="datepicker">
     <view class="datepicker-operator">
         <view class="datepicker-operator-item datepicker-operator-last" data-mark="last" bind:tap="setMonth"></view>
-        <view class="datepicker-operator-current" data-mark="current" bind:tap="setMonth">{{dateNow}}</view>
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="datepicker-operator-current">
+                {{dateNow}}
+            </view>
+        </picker>
         <view class="datepicker-operator-item datepicker-operator-next" data-mark="next" bind:tap="setMonth"></view>
     </view>
     <view class="datepicker-header">
@@ -12,8 +16,7 @@
     <view class="datepicker-body">
         <view class="datepicker-body-row" wx:for="{{days}}" wx:for-index="index" wx:for-item="day" wx:key="index">
             <view class="datepicker-body-column {{currentIndex==(index+''+inx)?'isSelected':''}} {{(index == 0 && item > 22||index >= 4 && item < 14)?'notCurrent':''}}" 
-                wx:for="{{day}}" wx:for-index="inx" wx:for-item="item" wx:key="inx"
-                data-rowIndex="{{index}}" data-columnIndex="{{inx}}" bind:tap="setCurrent">
+            wx:for="{{day}}" wx:for-index="inx" wx:for-item="item" wx:key="inx" data-rowIndex="{{index}}" data-columnIndex="{{inx}}" bind:tap="setCurrent">
                 {{item}}
             </view>
         </view>
