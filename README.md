@@ -11,6 +11,6 @@ currentTime为初始日期参数，updateDate允许在选择日期后向父组�
 
 ## 效果展示
 <div align="center">
- <img src="https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/current.jpg"  height="330" width="495">
- <img src="https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/select.jpg"  height="330" width="495">
+ <img src="https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/current.jpg"  height="630" width="495">
+ <img src="https://github.com/hanzhecheng/wxappDatePicker/blob/master/img/select.jpg"  height="630" width="495">
 </div>
