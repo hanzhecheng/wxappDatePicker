@@ -1,4 +1,4 @@
 <!-- index.wxml -->
 <view class="container">
-  <DatePicker bind:updateDate="updateDate"></DatePicker>
+  <DatePicker currentTime="{{dateNow}}" bind:updateDate="updateDate"></DatePicker>
 </view>

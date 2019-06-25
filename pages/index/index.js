@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    dateNow: ""
+    dateNow: "2018/10/14"
   },
   updateDate(e) {
     this.setData({

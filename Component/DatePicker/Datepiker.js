@@ -4,6 +4,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    currentTime: {
+      type: String
+    }
 
   },
   observers: {
@@ -16,10 +19,12 @@ Component({
   },
   lifetimes: {
     attached: function () {
+      console.log(this.data.currentTime)
+      let currentDate = this.data.currentTime ? new Date(this.data.currentTime) : (new Date())
       // 在组件实例进入页面节点树时执行
-      this.initDays(new Date())
+      this.initDays(currentDate)
       this.setData({
-        currentDate: new Date()
+        currentDate: currentDate
       })
     },
   },
@@ -249,7 +254,7 @@ Component({
       console.log(e.detail.value)
       this.setData({
         currentDate: new Date(e.detail.value),
-        notCurrentFlag:false
+        notCurrentFlag: false
       }, () => {
         this.initDays(this.data.currentDate)
       })
