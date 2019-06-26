@@ -14,7 +14,7 @@ Component({
       this.setData({
         dateNow: val.toLocaleDateString()
       })
-      this.triggerEvent("updateDate", val.toLocaleDateString())
+      this.triggerEvent("onSelectDate", val.toLocaleDateString())
     }
   },
   lifetimes: {
