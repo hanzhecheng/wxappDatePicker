@@ -3,11 +3,15 @@
 - 显示本月，上个月，下个月的日期
 - 切换日期
 - 选中日期状态改变
-- 支持初始传入日期参数，有的话就是传入日期，否则就是当前日期  调用方式
+- 支持传入初始日期参数  调用方式
 ```
 <DatePicker currentTime="{{dateNow}}" bind:updateDate="updateDate"></DatePicker>
 ```
-currentTime为初始日期参数，updateDate允许在选择日期后向父组件传递选中的日期
+### 参数  
+| 属性         |    类型       |  默认值  |  必填      | 说明  |
+| :----------  | ------------:| ---------------------:|------------:|:----------------------:|
+| currentTime  |  string      |     (new Date()).toLocaleDateString()      |    否    |当前日期|
+| updateDate   |  eventhandle |          |     否       |       选择的日期变化时向父组件传递的选中日期
 
 ## 效果展示
 <div align="center">
